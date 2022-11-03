@@ -61,7 +61,7 @@ class BankAccount
         end
 
 
-        my_account = ATM.new("Kwame", 2010)
+        my_account = ATM.new("Kwame", 2222)
 
         while !my_account.frozen?
             puts "What is your pin?"
@@ -77,11 +77,12 @@ class BankAccount
                     if command == :w || command == :d ... then
                         puts "what amount?"
                         amount = gets.chomp.to_i
-                    #     my_account.send command, amount
-                    # else
+                    end
+                    
 
-                    #     my_account.send command
-                    # end
+                
+                    break
+                   
                 
                 else
                     puts "That is not a command"
@@ -96,14 +97,10 @@ class BankAccount
     
 
         puts "You are a fucking hacker, get out of here" if my_account.frozen?
-        end 
+    end
+        
+    
+
     
 
 
-
-
-
-            
-            
-
-    end
